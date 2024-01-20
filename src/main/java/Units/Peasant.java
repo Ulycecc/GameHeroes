@@ -1,23 +1,25 @@
 package Units;
+
+import java.util.List;
+
 // Крестьянин
-public class Peasant extends Unit{
-    public Peasant (){
-        super(15,5,2, new int[]{-1,-3});
+public class Peasant extends Hero{
+
+
+    public Peasant (Coordinates xy){
+        super(15,5);
+        this.xy = xy;
+        super.initiative = 1;
     }
 
     @Override
-    public void step() {
+    public void step(List<Hero> team1, List<Hero> team2) {
+        if(die) this.status = "busy";
 
     }
 
-    @Override
-    public boolean isDead() {
-        return false;
-    }
 
-    @Override
-    public String getInfo() {
-        String s = this.getClass().getSimpleName() + ": " + this.name;
-        return s;
-    }
+
+
+
 }

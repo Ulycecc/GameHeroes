@@ -1,23 +1,19 @@
 package Units;
+
+import java.util.List;
+
 // Колдун
 public class Wizard extends Magicians  {
-    public Wizard() {
-        super(15,5,2, new int[]{-1,-3});
+
+    public Wizard(Coordinates xy) {
+        super(15, -5);
+        this.xy = xy;
     }
 
-    @Override
-    public void step() {
 
-    }
 
-    @Override
-    public boolean isDead() {
-        return false;
-    }
 
-    @Override
-    public String getInfo() {
-        String s = this.getClass().getSimpleName() + ": " + this.name;
-        return s;
-    }
+
 }
+
+

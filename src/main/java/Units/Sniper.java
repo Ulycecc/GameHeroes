@@ -1,23 +1,14 @@
 package Units;
+
+import java.util.List;
+
 // Снайпер
 public class Sniper extends Archers {
-    public Sniper(){
-        super(15,5,2, new int[]{-1,-3});
+
+    public Sniper(Coordinates xy) {
+        super(15, 10);
+        this.xy = xy;
     }
 
-    @Override
-    public void step() {
 
-    }
-
-    @Override
-    public boolean isDead() {
-        return false;
-    }
-
-    @Override
-    public String getInfo() {
-        String s = this.getClass().getSimpleName() + ": " + this.name;
-        return s;
-    }
 }

@@ -1,29 +1,22 @@
 package Units;
 
+import java.util.List;
+
 public class Monk extends Magicians{
-    public Monk(){
-        super(15,5,2, new int[]{-1,-3});
-        defense = 5;
+    public Monk(Coordinates xy){
+        super(15,-5);
+        this.xy = xy;
     }
     private void manaCast(){}
     private void manaAdd(){}
 
 
     @Override
-    public void step() {
-        manaCast();
-        manaAdd();
-        System.out.println("Заклинаю!");
+    public void step(List<Hero> team1, List<Hero> team2) {
+        return;
     }
 
-    @Override
-    public boolean isDead() {
-        return false;
-    }
 
-    @Override
-    public String getInfo() {
-        String s = this.getClass().getSimpleName() + ": " + this.name;
-        return s;
-    }
+
+
 }
